@@ -1,4 +1,7 @@
-# Cloudflare-Socks5/Http本地代理脚本
+
+<img width="766" height="181" alt="9edae247c703bef887a2d680c77c3c17" src="https://github.com/user-attachments/assets/a641b36d-59ba-41e4-ac6f-6622f786187e" />
+
+# 搭建方式1：Cloudflare-Socks5/Http本地代理脚本
 ### 支持基于Workers域名、Pages域名、自定义域名
 ### 可选 ECH-TLS、普通TLS、无TLS 三种代理模式，应对各种阻断封杀
 
@@ -13,7 +16,7 @@ curl -sSL https://raw.githubusercontent.com/yonggekkk/Cloudflare_vless_trojan/ma
 | 1、CF服务端域名:端口 | cf_domain | 域名:443系端口或者80系端口 | 无，必须CF处获取workers/pages/自定义的域名 | 必填 |
 | 2、CF服务端密钥 | token | 与服务端一样的字母数字 | 无密钥 | 可选 |
 | 3、客户端本地IP端口 | client_ip | 10000-65000之间 | 30000 | 可选 |
-| 4、指定优选IP/域名 | cf_cdnip | CF的优选IP或者优选域名 | yg(可任意1-13数字).ygkkk.dpdns.org | 可选 |
+| 4、指定优选IP/域名 | cf_cdnip | CF的优选IP或者优选域名 | yg(可任意1-13数字).ygkkk.dpdns.org，中国移动基本上是落地香港，电信联通基本上落地日本新加坡| 可选，也推荐使用```cloudflare-ech.com```这个优选域名，基本上落地美欧地区 |
 | 5、指定ProxyIP | pyip | ipv4或[ipv6]或域名 | 使用服务端ProxyIP | 可选 |
 | 6、DNS指定DoH | dns | DNS的DoH格式 | dns.alidns.com/dns-query | 可选 |
 | 7、ECH开关 | enable_ech | y=开启，n=关闭 | 开启ECH | 可选 |
@@ -46,7 +49,7 @@ ProxyIP是否有效影响着能否访问CF网站，比如CF官网、X推特、Ch
 
 ------------------------------------------------------------
 
-# Cloudflare-workers/pages代理脚本【目前版本：25.5.4】
+# 搭建方式2：Cloudflare-workers/pages代理脚本【目前版本：25.5.4】
 ### 1、本项目仅支持本地化部署
 ### 2、本项目配置都为本地化编辑，不使用订阅器、订阅转换等第三方外链引用
 ### 3、无需担心节点订阅信息被订阅器作者或者订阅转换作者后台查看
@@ -248,6 +251,8 @@ CDN优选域名：yg1.ygkkk.dpdns.org (yg1中的1，可换为1-11中任意数字
 ---------------------------------
 
 ### CF视频教程集合：
+
+[🥇搭建代理9大问题排行榜：第4名全网99%的人被误导！第1名每个人都被折腾到爆！全程高能！](https://youtu.be/pJwJBqBkcfw)
 
 [CF workers永久免费vless节点搭建教程（一）：全网首发演示跳IP现象，解密两大节点使用技巧，优选IP、优选域名的优缺点说明](https://youtu.be/9V9CQxmfwoA)
 
